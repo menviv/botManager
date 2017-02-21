@@ -1,0 +1,422 @@
+body {
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	margin:40px 0 .5em 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+input {
+    height: 20px;
+    background-color: black;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: 2px solid #CE8519;
+    width: 60%;
+}
+
+button#btnCreateNewStep {
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    background-color: #F0C610;
+    border-radius: 10px;
+    border: 1px solid orange;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+div#questsList {
+    padding: 10px;
+    border-radius: 20px;
+    max-width: 150px;
+    left: 40px;
+    max-height: 150px;
+    overflow: scroll;
+}
+
+button#btnAddPost {
+    height: 30px;
+    width: 80px;
+    cursor: pointer;
+    background-color: #F0C610;
+    border-radius: 10px;
+    border: 1px solid orange;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+span#Goal {
+    font-size: 20px;
+    color: #20BB20;
+    font-weight: 600;
+}
+
+span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+strong {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #E85858;
+}
+
+input#inputGoal {
+    height: 20px;
+    width:300px;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: 2px solid #CE8519;
+}
+
+button#btnAddQuest {
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid orange;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+select#users {
+    font-size: 20px;
+    height: 30px!important;
+    -webkit-appearance: initial;
+    width: 150px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+
+
+.TextBaloon {
+    background-color: cyan;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px;
+    margin-left: 20px;
+    color: #333333;
+    text-transform: initial;
+}
+
+.Owner {
+    font-size: 14px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #fff;
+    text-transform: initial;
+}
+
+div#questsPostList {
+    height: 500px;
+    overflow: scroll;
+}
+
+.PostContainer {
+    float: left;
+    width: 100%;
+}
+
+.questsPostList {
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top:20px;
+}
+
+div#secDiscussionHeader {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 10px;
+	max-width: 25%;
+    margin-top: 20px;
+    font-weight: 500;
+    background: rgb(51, 51, 56);
+    position: fixed;
+    max-height: 80%;
+    bottom: 50px;
+    border-radius: 20px;
+    border: 0px #00b7ff solid;
+    left: 900px;
+    padding: 30px;
+    opacity:1;
+
+}
+
+.ItemListOverFlowFix {
+    max-height: 400px;
+    overflow: scroll;
+}
+
+div#questlist {
+    left: 5px;
+    top: 50px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+iron-list:not([style-scope]):not(.style-scope) {
+    position: relative!important;
+}
+
+div#questsPostList {
+	height: 100%;
+	width: 50%;
+    overflow: scroll;
+    font-size: 26px;
+    color: #737373;
+    margin-bottom: 10px;
+    font-weight: 500;
+    float: right;
+    border-radius: 20px;
+    padding: 30px;
+    opacity: 1;
+}
+
+div#AddPost {
+    position: fixed;
+    left: 1250px;
+    bottom: 10px;
+    min-width: 25%;
+    padding: 20px;
+    opacity: 1;
+}
+
+span#LikeURL {
+    font-size: 30px;
+    font-weight: 500;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-image: url("http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/256/Hand-thumbs-up-like-2-icon.png");
+}
+
+.LikeAction {
+    font-size: 15px;
+    cursor: pointer;
+    width: 50px;
+    float: left;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position-y: 60%;
+    background-size: 40%;
+    background-image: url("http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/256/Hand-thumbs-up-like-2-icon.png");
+}
+
+a.linkAssignLikeQuestTouser {
+    color: rgba(245, 245, 220, 0);
+}
+
+.PostDate {
+    font-size: 12px;
+    float: right;
+}
+
+span#LoveURL {
+    font-size: 30px;
+    font-weight: 500;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-image: url("https://cdn3.iconfinder.com/data/icons/complete-set-icons/512/favourite512x512.png");
+}
+
+.LoveAction {
+    font-size: 15px;
+    cursor: pointer;
+    width: 50px;
+    float: left;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position-y: 60%;
+    background-size: 40%;
+    background-image: url("https://cdn3.iconfinder.com/data/icons/complete-set-icons/512/favourite512x512.png");
+}
+
+a.linkAssignLoveQuestTouser {
+    color: rgba(245, 245, 220, 0);
+}
+
+
+span#HateURL {
+    font-size: 30px;
+    font-weight: 500;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-image: url("https://cdn4.iconfinder.com/data/icons/business-services-vol-2-4/26/55_self_esteem_heart_love_minus_dislike_like-128.png");
+}
+
+.HateAction {
+    font-size: 15px;
+    cursor: pointer;
+    width: 50px;
+    float: left;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position-y: 60%;
+    background-size: 40%;
+    background-image: url("https://cdn4.iconfinder.com/data/icons/business-services-vol-2-4/26/55_self_esteem_heart_love_minus_dislike_like-128.png");
+}
+
+a.linkAssignHateQuestTouser {
+    color: rgba(245, 245, 220, 0);
+}
+
+
+
+
+div#secHeader {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.QuestTitle {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+div#AddQuest {
+    width: 250px;
+    padding-left: 5px;
+    padding-top: 20px;
+    display:none;
+}
+
+#wrapper {
+	padding-left:312px;
+	position:relative;
+}
+
+#userList {
+	margin:0 0 30px 0;
+}
+	#userList table {
+		border-collapse:separate;
+		border-spacing:1px;
+		background:#CCC;
+	}
+		#userList table th {
+			background:#EEE;
+			font-weight:600;
+			padding:10px 20px;
+			text-align:center;
+		}
+		#userList table tbody {
+			padding:0; margin:0;
+			border-collapse:collapse;
+			border-spacing:0px;
+		}
+			#userList table td {
+				background:#FFF;
+				padding:5px 10px;
+				text-align:center;
+			}
+
+	#questsList table {
+		border-collapse:separate;
+		border-spacing:1px;
+		background:#CCC;
+	}
+		#questsList table th {
+			background:#EEE;
+			font-weight:600;
+			padding:10px 20px;
+			text-align:center;
+		}
+		#questsList table tbody {
+			padding:0; margin:0;
+			border-collapse:collapse;
+			border-spacing:0px;
+		}
+			#questsList table td {
+				background:#FFF;
+				padding:5px 10px;
+				text-align:center;
+			}
+
+	#questsRatingList table {
+		border-collapse:separate;
+		border-spacing:1px;
+		background:#CCC;
+	}
+		#questsRatingList table th {
+			background:#EEE;
+			font-weight:600;
+			padding:10px 20px;
+			text-align:center;
+		}
+		#questsRatingList table tbody {
+			padding:0; margin:0;
+			border-collapse:collapse;
+			border-spacing:0px;
+		}
+			#questsRatingList table td {
+				background:#FFF;
+				padding:5px 10px;
+				text-align:center;
+			}
+
+
+
+
+#userInfo {
+    left: 400px;
+    opacity: 1;
+    color: #212121;
+    float: left;
+    padding: 10px;
+    border-radius: 20px;
+   
+}
+	#userInfo p {
+		padding:15px;
+		border:1px solid #CCC;
+		background:rgba(80,120,255,0.05);
+	}
+
+fieldset {
+	border:0;
+	padding:0; margin:0;
+}
+
+
+
+/* New version */
+
+.StepListBtns {
+    float: left;
+}
+

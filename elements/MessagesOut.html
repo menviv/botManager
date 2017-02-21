@@ -1,0 +1,883 @@
+
+    <dom-module id="x-MessagesOut">
+    
+    
+   <template>
+   
+     <style is="custom-style">
+    
+    
+       body {
+        direction: rtl;
+      } 
+     
+     
+     
+    section {
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    
+    section > paper-button {
+      background-color: var(--paper-blue-300);
+      padding: 5px;
+    }
+    section > paper-button:hover {
+      background-color: var(--paper-light-blue-200);
+      padding: 5px;
+    }
+    
+     paper-button {
+        color: white;
+        margin: 10px;
+        background-color: var(--google-blue-700);
+        white-space: nowrap;
+      }
+      
+    paper-dialog.colored {
+      border: 2px solid;
+      border-color: var(--paper-blue-500);
+      background-color: var(--paper-light-blue-50);
+      color: var(--paper-blue-500);
+    }
+    paper-dialog.size-position {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      width: 300px;
+      height: 300px;
+      overflow: auto;
+    }
+    
+    paper-tabs {
+      width: 400px;
+    }
+    .vertical-section-container {
+      max-width: 500px;
+    }
+    paper-dropdown-menu {
+      width: 200px;
+    } 
+    
+    paper-fab.CreateQuestFab.{
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+} 
+
+.TagContainer{
+
+    float: left;
+    width: 100%;
+    color: #2196f3;
+    margin-left: 0px;
+}
+
+.SavedTagContainer{
+
+	color: #E91E63;
+    font-weight: 600;
+    font-size: 15px;
+    float: left;
+    width: 80%;
+    margin-right: 50px;
+}
+
+.Tag {
+background-color: #D2D2D2;
+    font-weight: 500;
+    font-size: 13px;
+    float: left;
+    margin-left: 5px;
+}
+
+.TagIcon {
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    float: left;
+} 
+
+.NewQuest {
+    width: 30%;
+}
+
+     paper-card {
+      width: 100%;
+    }
+    .horizontal {
+      @apply(--layout-horizontal);
+    }
+    .justified {
+      @apply(--layout-justified);
+    }
+    .amber {
+      background: var(--paper-amber-900);
+    }
+    .lime {
+      background: var(--paper-lime-500);
+    }
+    .cyan {
+      background: var(--paper-cyan-500);
+    }
+    .dark {
+      background: var(--paper-blue-grey-500);
+    }
+    paper-card.dark, paper-card.amber, paper-card.lime, paper-card.cyan {
+      color: white;
+      --paper-card-header-color: white;
+      
+    }
+    paper-checkbox {
+      display: block;
+      margin-bottom: 4px;
+      --paper-checkbox-label-color: white;
+      --paper-checkbox-unchecked-color: white;
+    }
+    paper-icon-button {
+      color: var(--paper-grey-600);
+    }
+    paper-icon-button.white {
+      color: white !important;
+    } 
+      .TagIcon {
+    --iron-icon-height: 32px;
+    --iron-icon-width: 32px;
+    --iron-icon-fill-color: yellow; 
+  }
+    
+.TagContainer {
+    float: left;
+    width:80%;
+    margin-right: 50px;
+    color: var(--paper-blue-500);
+} 
+
+.QuestTagsList {
+    max-width: 50%;
+    width:80%;
+}
+
+.PhaseTwoPaperCard {
+
+	opacity:0;
+	float:left;
+	width:80%;
+
+}
+
+.PhaseOnePaperCard {
+
+    float: right;
+    margin-right: 5%;
+    padding: 1%;
+    width: 95%;
+}
+
+.CreateInMessageForm {
+
+	float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.CreateHasmachaForm {
+
+	float: right;
+    width: 100%;
+    text-align: right;
+    display:none;
+}
+
+
+.Container {
+
+	float:left;
+	width:100%;
+	
+
+}
+
+.Formheading {
+	color: #333;
+    margin-bottom: 40px;
+    -webkit-appearance: none;
+    text-align: inherit;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 40px;
+    background-color: #E4C7C7;
+}
+
+
+  .MediumBlue {
+    --iron-icon-height: 20px;
+    --iron-icon-width: 20px;
+    --iron-icon-fill-color: Blue ;
+    margin-left:5px;
+    margin-right:5px;
+    cursor:pointer;
+  } 
+  
+  .MediumRed {
+    --iron-icon-height: 20px;
+    --iron-icon-width: 20px;
+    --iron-icon-fill-color: Red ;
+    margin-left:5px;
+    margin-right:5px;
+    cursor:pointer;
+  } 
+  
+.IconMessageYellow {
+    --iron-icon-height: 22px;
+    --iron-icon-width: 22px;
+    --iron-icon-fill-color: Yellow;
+  }
+  
+.IconMessageGreen {
+    --iron-icon-height: 22px;
+    --iron-icon-width: 22px;
+    --iron-icon-fill-color: Green;
+  }    
+  
+.TaggingActivitySection {
+	width: 25%;
+    float: right;
+} 
+
+.TaggingActivitySectionContainer {
+    width: 100%;
+    float: right;
+    opacity:0;
+} 
+
+.TaggingActivityBtnSectionContainer {
+    width: 100%;
+    float: right;
+    opacity:0;    
+} 
+
+.TagNewActivity {
+    width: 100%;
+    height: auto;
+    float: right;
+}
+
+.TagSavedActivity {
+    width: 100%;
+    height: 300px;
+    float: right;
+}
+
+.floatright{float:right;}
+
+.DateInput {
+	font-size: 15px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.NumberInput {
+    width: 20%;
+}
+
+.FormDateContainer {
+    float: right;
+    width: 40%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+
+.FormTimeContainer {
+    float: right;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.FormLabel {
+    float: right;
+    margin-left:10px;
+    color: #212121;
+    -webkit-appearance: none;
+    text-align: inherit;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;   
+}
+
+.FormDateField {
+    float: right;
+}
+
+
+
+  .bigRed {
+    --iron-icon-height: 25px;
+    --iron-icon-width: 25px;
+    margin-left:10px;    
+    margin-right:10px;
+    --iron-icon-fill-color: Red;
+  }
+  
+.FormLongElement {
+    width: 80%;
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+}
+
+.FormElement {
+    width: 40%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    float: right;
+}  
+
+
+.FormBtm {
+    width: 15%;
+    min-width: 150px;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-left: 20px;
+    position: absolute;
+    bottom: 35%;
+    left: 40%;
+    z-index: 10;
+}  
+
+
+.GoogleMap {
+
+	width: 400px;
+	height: 400px;
+    margin-top: 60px;
+    margin-right: 50px;
+    margin-left: 20px;
+    float: right;
+    overflow: hidden;  
+    display:none; 
+} 
+
+
+    .GoogleMap iframe {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+  
+ .ActivityTypeIcon {
+ 
+	width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: right;
+    cursor: pointer;
+ 
+ } 
+ 
+ .ActivityTypeHeader {
+    float: right;
+    width: 100%;
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin-right: 4vw;
+    margin-top: 2vw;	
+ }
+
+
+  .ActivityTypeHeader[wide-layout] {
+    float: right;
+    width: 100%;
+    font-size: 4.5vw;
+    font-weight: 600;
+    margin-right: 4vw;
+    margin-top: 2vw;	
+ }
+
+
+ 
+ .ActivityType {
+    width: 70px;
+    position: absolute;
+    font-family: alef;
+    cursor: pointer;
+    left: 30px;
+    top: 70px;
+    color: #2196f3;
+ }
+ 
+ .SectionCont[wide-layout] {
+    float: right;
+    width: 90%;
+    padding: 2%;
+    max-height: 70%;
+    overflow-y: scroll;
+ }
+
+ .SectionRecordsCont[wide-layout] {
+    float: right;
+    width: 80%;
+    padding: 0vw;
+    margin-right: 5vw;
+    margin-top: 2vw;
+    font-size: 1.8vw;
+    max-height: 70%;
+    overflow-y: scroll;
+ }
+
+
+ .SectionCont {
+    float: right;
+    width: 90%;
+    padding: 2%;
+    max-height: 70%;
+    overflow-y: scroll;
+ }
+
+  .SectionRecordsCont {
+    float: right;
+    width: 90%;
+    padding: 2%;
+    max-height: 70%;
+    overflow-y: scroll;
+ }
+
+
+ 
+ .ActivityTypeLargeIcon {
+ 	float: left;
+ 	width: 20%;
+ }
+ 
+.ActivityTypeLargeIconLeft {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: -70px;
+    top: -50px;
+}
+
+
+.TypeTitle{
+    float: right;
+    width: 100%;
+    font-size: 16px;
+    text-align: -webkit-center;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;    
+}
+
+.ActivityTypeLabel {
+    font-weight: 600;
+    transform: rotate(320deg);
+    margin-top: 60px;
+    font-size: 20px;
+    color: #E91E63;
+}
+
+.FormMapContainer {
+  position: absolute;
+    left: 140px;
+    top: 30px;
+    max-width: 50%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.MainContainerCreateInMessage {
+    font-family: alef;
+    min-height: 600px;
+}
+
+::-webkit-datetime-edit { padding: 0em; }
+::-webkit-datetime-edit-fields-wrapper { background: silver; }
+::-webkit-datetime-edit-text {  color: red; padding: 0 0.0em; }
+::-webkit-datetime-edit-month-field { color: blue; }
+::-webkit-datetime-edit-day-field { color: green; }
+::-webkit-datetime-edit-year-field { color: purple; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { background: orange; }
+
+
+input.time_element.style-scope.x-CreateInMessage {
+    font-size: 15px;
+    border-color: rgba(233, 30, 99, 0.28);
+}
+
+select.Privacy {
+    font-size: 1.1em;
+    border-radius: 0px;
+    font-family: alef;
+    color: #e91e63;
+    border-color: #2196f3;
+}
+
+.FormMusmahimContainer {
+    float: right;
+    width: 75%;
+    border-top: 1px #e0dbdb solid;
+    border-bottom: 1px #e0dbdb solid;
+    margin-right: 50px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
+.FormElementMusmahim {
+    width: 10%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    float: right;
+} 
+
+.invisible {opacity:0;}
+
+
+
+
+.LogoCont[wide-layout] {
+    margin: 0;
+    line-height: 5vw;
+    float: right;
+    width: 100%;
+    padding-top: 3vw;
+    text-align: center;
+}
+
+.LogoCont {
+    margin: 0;
+    line-height: 5vw;
+    float: right;
+    width: 100%;
+    padding-top: 5vw;
+    text-align: center;
+    margin-bottom:3vw;
+}
+
+
+.LogoIcon[wide-layout] {
+    width: 8vw;
+    height: 8vw;
+}
+
+.LogoIcon {
+    width: 18vw;
+    height: 18vw;
+}
+
+.RichEdit {
+    width: 90%;
+    float: right;
+    margin-right: 2vw;
+}
+
+.MessageItemHeaderCaption{
+    float: right;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-bottom: 0.5vw;
+    margin-right: 2vw;
+}
+
+.MessageItemHeaderSmallCaption{
+    float: right;
+    font-size: 1.6vw;
+    font-weight: 500;
+    margin-bottom: 0.5vw;
+    margin-right: 2vw;
+}
+
+.MessageItemColumn[wide-layout] {
+    float: right;
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-bottom: 1vw;
+    margin-left: 3vw;
+}
+
+.MessageItemColumn {
+    float: right;
+    font-size: 3vw;
+    font-weight: 500;
+    margin-bottom: 1vw;
+    margin-left: 3vw;
+}
+
+.FormBtnElement {
+    float: right;
+    width: 95%;
+    text-align: center;
+}
+
+.RecordCont {
+    float: right;
+    width: 100%;
+}
+
+
+       
+  </style>
+
+
+  <iron-media-query query="(min-width: 800px)" query-matches="{{wide}}"></iron-media-query> 
+
+         
+           <div class="Container" id="CreateInObject">      
+    		
+           	<paper-card heading="" id="CreateInMessage"  >    
+           	
+					
+                <div class="SectionCont" wide-layout$="{{wide}}">  
+
+                     <div class="LogoCont" wide-layout$="{{wide}}">  <iron-icon class="LogoIcon" wide-layout$="{{wide}}" src="/logos/logo.png"></iron-icon> </div>         
+           		
+           			<div class="ActivityTypeHeader" wide-layout$="{{wide}}"> הודעות יוצאות:</div>
+           
+                </div> 	
+
+                <div class="SectionRecordsCont" wide-layout$="{{wide}}">  
+           				
+                        <template is="dom-repeat" items="{{OutMessages}}" >
+
+                            <div class="RecordCont">  
+                                
+                                <div class="MessageItemColumn"  wide-layout$="{{wide}}" >{{item.CreatedDate}}</div>
+
+                                <div class="MessageItemColumn"  wide-layout$="{{wide}}" >{{item.Phone}}</div>
+
+                                <div class="MessageItemColumn"  wide-layout$="{{wide}}" >{{item.Status}}</div>   
+
+                            </div>                             
+
+                        </template>
+ 						
+  						    					
+                </div>
+     		
+			</paper-card>
+			
+				
+ 		</div>		
+
+     <iron-ajax
+     auto
+      id="ajaxGetAllOutMessages"
+      method="GET"
+      url="/smsOut/GetAllOutMessages/"
+      last-response="{{OutMessages}}">
+	</iron-ajax> 
+
+
+
+
+
+	 <iron-ajax
+       method="POST"
+       content-type="application/json"
+      id="ajaxUCreateEmailMessageToFax"
+      url="/smsOut/CreateEmailMessageToFax/"
+       >
+	</iron-ajax> 
+
+
+    
+ 
+
+
+  </template>
+
+
+    <script>
+      Polymer({
+        is: 'x-MessagesOut',
+
+  behaviors: [
+    Polymer.NeonAnimationRunnerBehavior
+  ],
+
+    properties: {
+    
+    
+      stepid: String,
+      responseData:{
+        type:Object,
+        notify:true
+            },
+      
+    opened: {
+      type: Boolean
+    },
+    animationConfig: {
+      value: function() {
+      
+        return {       
+          'entry': {
+            // provided by neon-animation/animations/scale-up-animation.html
+            name: 'scale-up-animation',
+            node: this
+          },
+          'exit': {
+            // provided by neon-animation/animations/fade-out-animation.html
+            name: 'scale-down-animation',
+            node: this
+          },
+          'exitPhaseOne': {
+            // provided by neon-animation/animations/fade-out-animation.html
+            name: 'scale-down-animation',
+            node: this.$.NewActivity,
+            axis: 'y',
+            timing: 10000
+          },          
+          'openPhaseTwo': {
+            // provided by neon-animation/animations/fade-out-animation.html
+            name: 'fade-in-animation',
+            node: this.$.TaggingActivitySectionContainer,
+            timing: 10000
+          }          
+          
+        }
+      }
+    }
+
+
+    },
+    
+    
+
+PopulateOutMessages: function() {
+
+        this.$.ajaxGetAllOutMessages.generateRequest(); 
+ 
+},
+
+
+
+   UpdateMessageBody: function() {
+
+      var CurrentDate = localStorage.getItem('CurrentDate');
+
+      var CreateInMessageID = localStorage.getItem('CreateInMessage');
+
+      localStorage.removeItem('CreateInMessage');
+
+      var MessagePhone = document.getElementById('MessageItemPhoneID').innerHTML; 
+
+      var MessageBody = CKEDITOR.instances.MessageBodyID.getData();
+
+        var UpdateMessageBody = {
+          'Status': 'InProcess',
+          'MessagePhone': MessagePhone,
+          'MessageID': CreateInMessageID,
+          'MessageBody': MessageBody,
+          'ChangedDate': CurrentDate
+        } 
+
+
+        this.$.ajaxUpdateMessageRecord.body = UpdateMessageBody;  
+                  
+        var EditTemplateRecordUrl="/smsOut/UpdateMessageBody/";
+
+        this.$.ajaxUpdateMessageRecord.url = EditTemplateRecordUrl;    
+
+        this.$.ajaxUpdateMessageRecord.generateRequest();  
+
+
+
+        this.$.ajaxUCreateEmailMessageToFax.body = UpdateMessageBody; 
+
+        this.$.ajaxUCreateEmailMessageToFax.generateRequest();   
+
+
+         
+
+  
+   },
+
+
+
+	
+
+
+
+	CreateInMessageRequest: function() {
+					
+        var SmsRequest = localStorage.getItem('JSONdata');
+        var SmsRequestobj = $.parseJSON(SmsRequest);
+        var CreatedDate = moment().format("DD-MM-YYYY");
+        
+        SmsRequestobj.Date = CreatedDate;
+        SmsRequestobj.CreatedDate = CreatedDate;
+        
+        SmsRequestobj.Type = "None";
+        //localStorage.removeItem('JSONdata');
+        SmsRequestobj.Status = "Active";
+
+        console.log('SmsRequestobj:', SmsRequestobj);
+
+  		this.$.AjaxCreateSmsRequestobj.body = SmsRequestobj;	
+  		this.$.AjaxCreateSmsRequestobj.generateRequest();        
+  	
+    }, 
+
+
+
+	
+	DefineActivityType: function(e) {
+			
+		var ActivityType = e.currentTarget.getAttribute('ActivityType');
+		
+		localStorage.setItem('CurrentActivityFilter', ActivityType);
+		
+			if ( ActivityType =='Activity') {
+			
+				NewActivity.querySelector('.ActivityTypeLargeIconLeft').src = '/icons/activity.png';
+				
+        CreateNewObject.querySelector(".CreateHasmachaForm").style.display = "none";
+
+        CreateNewObject.querySelector(".CreateInMessageForm").style.display = "block";       
+									
+			} else {
+			
+				NewHasmacha.querySelector('.ActivityTypeLargeIconLeft').src = '/icons/hasmacha.png';
+				
+        CreateNewObject.querySelector(".CreateHasmachaForm").style.display = "block";
+
+        CreateNewObject.querySelector(".CreateInMessageForm").style.display = "none";
+							
+			}
+  	
+    }, 
+	
+	
+
+    
+   PopulatedActivity: function(request) {
+        respObj = request.detail.response; 
+        if(respObj){
+          
+          this.responseData = respObj;
+        }
+      },
+      
+      
+
+        
+        
+      });
+    </script>
+
+
+</dom-module>
+

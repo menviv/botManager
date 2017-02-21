@@ -1,0 +1,731 @@
+
+    <dom-module id="x-createOutMessage">
+    
+    
+   <template>
+   
+
+   
+   
+     <style is="custom-style">
+    
+    
+       body {
+        direction: rtl;
+      } 
+     
+     
+     
+    section {
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+    
+    section > paper-button {
+      background-color: var(--paper-blue-300);
+      padding: 5px;
+    }
+    section > paper-button:hover {
+      background-color: var(--paper-light-blue-200);
+      padding: 5px;
+    }
+    
+     paper-button {
+        color: white;
+        margin: 10px;
+        background-color: var(--google-blue-700);
+        white-space: nowrap;
+      }
+      
+    paper-dialog.colored {
+      border: 2px solid;
+      border-color: var(--paper-blue-500);
+      background-color: var(--paper-light-blue-50);
+      color: var(--paper-blue-500);
+    }
+    paper-dialog.size-position {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      width: 300px;
+      height: 300px;
+      overflow: auto;
+    }
+    
+    paper-tabs {
+      width: 400px;
+    }
+    .vertical-section-container {
+      max-width: 500px;
+    }
+    paper-dropdown-menu {
+      width: 200px;
+    } 
+    
+    paper-fab.CreateQuestFab.{
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+} 
+
+.TagContainer{
+
+    float: left;
+    width: 100%;
+    color: #2196f3;
+    margin-left: 0px;
+}
+
+.SavedTagContainer{
+
+	color: #E91E63;
+    font-weight: 600;
+    font-size: 15px;
+    float: left;
+    width: 80%;
+    margin-right: 50px;
+}
+
+.Tag {
+background-color: #D2D2D2;
+    font-weight: 500;
+    font-size: 13px;
+    float: left;
+    margin-left: 5px;
+}
+
+.TagIcon {
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    float: left;
+} 
+
+.NewQuest {
+    width: 30%;
+}
+
+     paper-card {
+      width: 100%;
+    }
+    .horizontal {
+      @apply(--layout-horizontal);
+    }
+    .justified {
+      @apply(--layout-justified);
+    }
+    .amber {
+      background: var(--paper-amber-900);
+    }
+    .lime {
+      background: var(--paper-lime-500);
+    }
+    .cyan {
+      background: var(--paper-cyan-500);
+    }
+    .dark {
+      background: var(--paper-blue-grey-500);
+    }
+    paper-card.dark, paper-card.amber, paper-card.lime, paper-card.cyan {
+      color: white;
+      --paper-card-header-color: white;
+      
+    }
+    paper-checkbox {
+      display: block;
+      margin-bottom: 4px;
+      --paper-checkbox-label-color: white;
+      --paper-checkbox-unchecked-color: white;
+    }
+    paper-icon-button {
+      color: var(--paper-grey-600);
+    }
+    paper-icon-button.white {
+      color: white !important;
+    } 
+      .TagIcon {
+    --iron-icon-height: 32px;
+    --iron-icon-width: 32px;
+    --iron-icon-fill-color: yellow; 
+  }
+    
+.TagContainer {
+    float: left;
+    width:80%;
+    margin-right: 50px;
+    color: var(--paper-blue-500);
+} 
+
+.QuestTagsList {
+    max-width: 50%;
+    width:80%;
+}
+
+.PhaseTwoPaperCard {
+
+	opacity:0;
+	float:left;
+	width:80%;
+
+}
+
+.PhaseOnePaperCard {
+
+    float: right;
+    margin-right: 5%;
+    padding: 1%;
+    width: 95%;
+}
+
+.CreateActivityForm {
+
+	float: right;
+    width: 100%;
+    text-align: right;
+}
+
+.CreateHasmachaForm {
+
+	float: right;
+    width: 100%;
+    text-align: right;
+    display:none;
+}
+
+
+.Container {
+
+	float:left;
+	width:100%;
+	
+
+}
+
+.Formheading {
+	color: #333;
+    margin-bottom: 40px;
+    -webkit-appearance: none;
+    text-align: inherit;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 40px;
+    background-color: #E4C7C7;
+}
+
+
+  .MediumBlue {
+    --iron-icon-height: 20px;
+    --iron-icon-width: 20px;
+    --iron-icon-fill-color: Blue ;
+    margin-left:5px;
+    margin-right:5px;
+    cursor:pointer;
+  } 
+  
+  .MediumRed {
+    --iron-icon-height: 20px;
+    --iron-icon-width: 20px;
+    --iron-icon-fill-color: Red ;
+    margin-left:5px;
+    margin-right:5px;
+    cursor:pointer;
+  } 
+  
+.IconMessageYellow {
+    --iron-icon-height: 22px;
+    --iron-icon-width: 22px;
+    --iron-icon-fill-color: Yellow;
+  }
+  
+.IconMessageGreen {
+    --iron-icon-height: 22px;
+    --iron-icon-width: 22px;
+    --iron-icon-fill-color: Green;
+  }    
+  
+.TaggingActivitySection {
+	width: 25%;
+    float: right;
+} 
+
+.TaggingActivitySectionContainer {
+    width: 100%;
+    float: right;
+    opacity:0;
+} 
+
+.TaggingActivityBtnSectionContainer {
+    width: 100%;
+    float: right;
+    opacity:0;    
+} 
+
+.TagNewActivity {
+    width: 100%;
+    height: auto;
+    float: right;
+}
+
+.TagSavedActivity {
+    width: 100%;
+    height: 300px;
+    float: right;
+}
+
+.floatright{float:right;}
+
+.DateInput {
+	font-size: 15px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.NumberInput {
+    width: 20%;
+}
+
+.FormDateContainer {
+    float: right;
+    width: 40%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+
+.FormTimeContainer {
+    float: right;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+.FormLabel {
+    float: right;
+    margin-left:10px;
+    color: #212121;
+    -webkit-appearance: none;
+    text-align: inherit;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;   
+}
+
+.FormDateField {
+    float: right;
+}
+
+
+
+  .bigRed {
+    --iron-icon-height: 25px;
+    --iron-icon-width: 25px;
+    margin-left:10px;    
+    margin-right:10px;
+    --iron-icon-fill-color: Red;
+  }
+  
+.FormLongElement[wide-layout] {
+    width: 25vw;
+    margin-top: 3vw;
+    margin-right: 40%;
+    float: right;
+}
+
+.FormLongElement {
+    width: 55vw;
+    margin-top: 3vw;
+    margin-right: 20%;
+    float: right;
+}
+
+.FormElement {
+    width: 40%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    float: right;
+}  
+
+
+ 
+
+
+.GoogleMap {
+
+	width: 400px;
+	height: 400px;
+    margin-top: 60px;
+    margin-right: 50px;
+    margin-left: 20px;
+    float: right;
+    overflow: hidden;  
+    display:none; 
+} 
+
+
+    .GoogleMap iframe {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+  
+ .ActivityTypeIcon {
+ 
+	width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: right;
+    cursor: pointer;
+ 
+ } 
+ 
+
+ 
+ .ActivityType {
+    width: 70px;
+    position: absolute;
+    font-family: alef;
+    cursor: pointer;
+    left: 30px;
+    top: 70px;
+    color: #2196f3;
+ }
+ 
+ .ActivityTypeCont {
+ 	float: right;
+   width: 100%;
+ }
+ 
+ .ActivityTypeLargeIcon {
+ 	float: left;
+ 	width: 20%;
+ }
+ 
+.ActivityTypeLargeIconLeft {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: -70px;
+    top: -50px;
+}
+
+
+.TypeTitle{
+    float: right;
+    width: 100%;
+    font-size: 16px;
+    text-align: -webkit-center;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    -webkit-font-smoothing: antialiased;    
+}
+
+.ActivityTypeLabel {
+    font-weight: 600;
+    transform: rotate(320deg);
+    margin-top: 60px;
+    font-size: 20px;
+    color: #E91E63;
+}
+
+.FormMapContainer {
+  position: absolute;
+    left: 140px;
+    top: 30px;
+    max-width: 50%;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.MainContainerCreateActivity {
+    font-family: alef;
+    min-height: 600px;
+}
+
+::-webkit-datetime-edit { padding: 0em; }
+::-webkit-datetime-edit-fields-wrapper { background: silver; }
+::-webkit-datetime-edit-text {  color: red; padding: 0 0.0em; }
+::-webkit-datetime-edit-month-field { color: blue; }
+::-webkit-datetime-edit-day-field { color: green; }
+::-webkit-datetime-edit-year-field { color: purple; }
+::-webkit-inner-spin-button { display: none; }
+::-webkit-calendar-picker-indicator { background: orange; }
+
+
+input.time_element.style-scope.x-createactivity {
+    font-size: 15px;
+    border-color: rgba(233, 30, 99, 0.28);
+}
+
+select.Privacy {
+    font-size: 1.1em;
+    border-radius: 0px;
+    font-family: alef;
+    color: #e91e63;
+    border-color: #2196f3;
+}
+
+.FormMusmahimContainer {
+    float: right;
+    width: 75%;
+    border-top: 1px #e0dbdb solid;
+    border-bottom: 1px #e0dbdb solid;
+    margin-right: 50px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+}
+
+.FormElementMusmahim {
+    width: 10%;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    float: right;
+} 
+
+.invisible {opacity:0;}
+
+
+
+
+.LogoCont[wide-layout] {
+    margin: 0;
+    line-height: 5vw;
+    float: right;
+    width: 100%;
+    padding-top: 3vw;
+    text-align: center;
+}
+
+.LogoCont {
+    margin: 0;
+    line-height: 5vw;
+    float: right;
+    width: 100%;
+    padding-top: 5vw;
+    text-align: center;
+    margin-bottom:3vw;
+}
+
+paper-button.FormBtm {
+    width: 10vw;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 10;
+    font-size: 5vw;
+    background-color: #992ea8;
+} 
+
+paper-button.FormBtm[wide-layout] {
+    width: 3vw;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 10;
+    font-size: 1.5vw;
+    background-color: #992ea8;
+} 
+
+.MessageHeader[wide-layout] {
+  float: right;
+    width: 100%;
+    font-size: 2.5vw;
+    font-weight: 600;
+    margin-top: 3vw;
+    margin-right: initial;
+    text-align: center;
+ }
+
+
+ .MessageHeader {
+    float: right;
+    width: 100%;
+    font-size: 5.5vw;
+    font-weight: 600;
+    margin-right: 0vw;
+    margin-top: 3vw;
+    text-align: center;		
+ }
+
+
+
+
+.LogoIcon {
+    width: 18vw;
+    height: 18vw;
+}
+
+
+.LogoIcon[wide-layout] {
+    width: 8vw;
+    height: 8vw;
+}
+
+
+
+       
+  </style>
+
+  <iron-media-query query="(min-width: 800px)" query-matches="{{wide}}"></iron-media-query> 
+         
+           <div class="Container" id="CreateNewObject">      
+    		
+           	<paper-card heading="" id="StepOneCreateQuest" class="" >    
+           	
+					<form is="iron-form" method="get" action="/" class="CreateActivityForm" id="NewOutMessage">
+					
+           				<div class="ActivityTypeCont">  
+
+                     <div class="LogoCont" wide-layout$="{{wide}}">  <iron-icon class="LogoIcon"  wide-layout$="{{wide}}"  src="/logos/logo.png"></iron-icon> </div>         
+           		
+           					<div class="MessageHeader" wide-layout$="{{wide}}"> אישור הזמנה וקבלת פקס חוזר </div>
+           
+           				</div> 	
+           				
+
+                   <div class="ActivityTypeCont"> 
+  							
+  					      	<div class="FormLongElement" wide-layout$="{{wide}}"><paper-input id="phoneToText" name="Phone" label="מספר טלפון" char-counter maxlength="12" required></paper-input></div>
+                    <div class="FormLongElement" wide-layout$="{{wide}}"><paper-input id="emailToText" name="Email" label=" דוא״ל " char-counter maxlength="80" ></paper-input></div>
+
+                  </div> 
+
+    					<paper-button raised class="FormBtm" id="FormBtmID" wide-layout$="{{wide}}" on-tap="CreateNewSmsRequest"  > שלח </paper-button>
+    					
+  	  					 
+
+   						 
+  					</form>
+
+				
+
+
+     		
+			</paper-card>
+			
+				
+ 		</div>		
+
+
+
+
+
+	 <iron-ajax
+       method="POST"
+       content-type="application/json"
+      id="AjaxCreateSmsRequestobj"
+      url="/smsOut/CreateSmsMessage/"
+      last-response="{{SmsRequestsData}}">
+	</iron-ajax> 
+
+
+
+
+  </template>
+
+
+    <script>
+      Polymer({
+        is: 'x-createOutMessage',
+
+  behaviors: [
+    Polymer.NeonAnimationRunnerBehavior
+  ],
+
+    properties: {
+    
+    
+      stepid: String,
+      responseData:{
+        type:Object,
+        notify:true
+            },
+      
+    opened: {
+      type: Boolean
+    },
+    animationConfig: {
+      value: function() {
+      
+        return {       
+          'entry': {
+            // provided by neon-animation/animations/scale-up-animation.html
+            name: 'scale-up-animation',
+            node: this
+          },
+          'exit': {
+            // provided by neon-animation/animations/fade-out-animation.html
+            name: 'scale-down-animation',
+            node: this
+          },
+          'exitPhaseOne': {
+            // provided by neon-animation/animations/fade-out-animation.html
+            name: 'scale-down-animation',
+            node: this.$.NewActivity,
+            axis: 'y',
+            timing: 10000
+          },          
+          'openPhaseTwo': {
+            // provided by neon-animation/animations/fade-out-animation.html
+            name: 'fade-in-animation',
+            node: this.$.TaggingActivitySectionContainer,
+            timing: 10000
+          }          
+          
+        }
+      }
+    }
+
+
+    },
+    
+    
+
+ 
+
+
+	CreateNewSmsRequest: function() {
+
+      var CreatedDate = moment().format("DD-MM-YYYY");
+
+        var SmsRequestobj = {
+            'Phone': $('#phoneToText').val(),
+            'Email': $('#emailToText').val(),
+            'Date': CreatedDate,
+            'Type': "None",
+            'Status': "Active",
+            'CreatedDate': CreatedDate
+        }
+        
+  		this.$.AjaxCreateSmsRequestobj.body = SmsRequestobj;	
+  		this.$.AjaxCreateSmsRequestobj.generateRequest();   
+
+      scope.selected = 2;
+
+      this.$.AjaxCreateSmsRequestobj.generateRequest(); 
+
+      document.querySelector('x-MessagesOut').PopulateOutMessages();     
+  	
+    }, 
+
+
+
+      
+      
+
+        
+        
+      });
+    </script>
+
+
+</dom-module>
+

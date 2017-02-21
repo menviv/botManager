@@ -1,0 +1,82 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our test
+
+    // Wrapper
+    #wrapper
+    
+        // USER INFO
+        #userInfo
+            h2 Goal Steps
+            p
+                strong Goal:
+                |  <span id='Goal'></span>
+                br 
+                strong Goal Type:
+                |  <span id='GoalType'></span>
+                br 
+                strong Goal Rating:
+                |  <span id='GoalRating'></span>
+                br                 
+                strong Goal Scoring:
+                |  <span id='GoalScoring'></span>
+                br                                            
+                strong Step1:
+                |  <span id='Step1'></span>
+                br
+                strong Step2:
+                |  <span id='Step2'></span>
+                br
+                strong Step3:
+                |  <span id='Step3'></span>
+                br
+                strong Step4:
+                |  <span id='Step4'></span>
+        // /USER INFO
+
+        // USER LIST
+        h2 Goals List
+        #userList
+            table
+                thead
+                    th Goal
+                    th Step1
+                    th Delete?
+                tbody
+        // /USER LIST
+
+        // QUESTS LIST
+        h2 Quests List
+        #questsList
+            table
+                thead
+                    th Goal
+                    th Step1
+                    th Delete?
+                tbody
+        // /QUESTS LIST
+
+        // ADD USER
+        h2 Add New Goal
+        #addUser
+            fieldset
+                input#inputGoal(type='text', placeholder='Goal')
+                br
+                input#inputGoalRating(type='text', placeholder='GoalRating')
+                input#inputGoalScoring(type='text', placeholder='GoalScoring')
+    select(name = "dropdown")
+      option(value="domain") Domain
+      option(value="test") Test
+      option(value="random") Random
+      option(value="databases") Databases                
+                input#inputStep1(type='text', placeholder='Step1')                
+                input#inputStep2(type='text', placeholder='Step2')
+                input#inputStep3(type='text', placeholder='Step3')
+                input#inputStep4(type='text', placeholder='Step4')                
+                br
+                button#btnAddGoal Add New Goal
+        // /ADD USER
+
+    // /WRAPPER

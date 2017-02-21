@@ -1,0 +1,102 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to our quest page
+
+    // Wrapper
+    #wrapper
+    
+    paper-drawer-panel#paperDrawerPanel
+
+        // Login    
+    form(action="/csvuploader", method="post", enctype="multipart/form-data")
+    
+    select#users
+      option(value="ChooseName") Choose Name
+      option(value="Menashe") Menashe
+      option(value="Chezy") Chezy
+      option(value="Ron") Ron
+    p
+
+        // QUESTS LIST
+        div#questsList Quests List
+        // QUESTS LIST
+
+
+        
+        // QUESTS INFO
+        div#userInfo
+            div#secHeader Quest Details
+            p            
+                strong Quest:
+                |  <span id='Quest'></span>
+                br 
+                strong Quest Type:
+                |  <span id='QuestType'></span>
+                br
+                strong Created By:
+                |  <span id='QuestCreatedBy'></span>
+                br
+                strong Created Date:
+                |  <span id='QuestCreatedDate'></span>
+                br                
+                strong Show Steps:
+                |  <span id='ShowStepsURL'></span> 
+                br
+                strong Delete Quest:
+                |  <span id='DeleteQuestURL'></span>
+                br
+                |  <span id='LikeURL'></span>&nbsp;&nbsp;&nbsp;<span id='LoveURL'></span>&nbsp;&nbsp;&nbsp;<span id='HateURL'></span>
+                br                            
+            table#questsStepList
+                thead
+                    th Step Title
+                    th Step Description
+                tbody
+            fieldset                          
+                paper-input#inputStepTitle(type='text', placeholder='Step Title', label='this label floats after typing')                
+                paper-input#inputStepDesc(type='text', placeholder='Step Desc' char-counter)
+                paper-button#btnCreateNewStep Create New
+            table#questsRatingList
+                thead
+                    th User Name
+                    th Quest Name
+                tbody                                                                                                  
+        // QUESTS INFO  
+
+
+
+        
+        
+        // ADD Quest
+        div#secHeader Add New Quest
+        div#AddQuest
+            fieldset
+            div#AddQuest2
+                paper-input(id="Inputlabel")                            
+                paper-button#btnAddQuest Add New Quest
+        // /ADD Quest              
+
+
+
+
+        // QUESTS Discussion Area
+        div#Drawer 
+        div#questsPostList
+        div#AddPost
+            fieldset        
+                input#inputText(type='text', placeholder='Text')              
+                button#btnAddPost Post
+        // Discussion Area
+        
+
+   
+   
+   
+   
+        
+
+
+
+    // /WRAPPER

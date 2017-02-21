@@ -1,0 +1,428 @@
+    <style is="custom-style">
+ 
+ 
+ 
+       body {
+        direction: rtl;
+        overflow: hidden;
+        @apply(--layout-fullbleed);
+        @apply(--layout-vertical);
+      }
+      .toolbar {
+        position: relative;
+        padding: 8px;
+        background-color: white;
+        z-index: 12;
+        line-height: initial;
+        letter-spacing: initial;
+      }
+      neon-animated-pages {
+        @apply(--layout-flex);
+      }
+      neon-animatable {
+        color: white;
+        @apply(--layout-horizontal);
+        @apply(--layout-center-center);
+        @apply(--paper-font-display4);
+      }
+      
+      
+      app-toolbar {
+        background-color: var(--google-green-700);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+        color: white;
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      app-toolbar paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      } 
+ 
+ 
+
+    
+
+      paper-button {
+        color: white;
+        margin: 10px;
+        background-color: var(--google-blue-700);
+        white-space: nowrap;
+      }
+
+      
+      .DrawerbtnsPanel {
+    position: absolute;
+    right: -30px;
+    bottom: 15px;
+	}
+	
+.StepsPanelContainer {
+    width: 100%;
+    max-height: 20%;
+    overflow: hidden;
+    float: left;
+    border-bottom: 1px #000 solid;
+    border-top: 1px #000 solid;
+}	
+	
+
+.PostsPanelContainer {
+    width: 100%;
+    float: left;
+}
+
+.NewPostPanelContainer {
+    width: 100%;
+    float: left;
+    position: absolute;
+    bottom: 0px;
+    background-color: #FFFFFF;
+}
+
+.QuestListToggle {
+    position: absolute;
+    bottom: 20%;
+    right: 10px;
+    z-index: 10;
+}
+
+.CreateNewQuestToggle {
+    position: absolute;
+    bottom: 50%;
+    right: 10px;
+}
+
+
+.StepTitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    float: left;
+    margin-left: 20px;
+}
+
+.ActivitiesPanel {
+    width: 75%;
+    max-height: 40%;
+    float: right;
+    text-align: right;
+}
+
+.TagsPanel {
+    width: 20%;
+    max-height: 40%;
+    float: left;
+}
+
+
+
+.StepsPanel {
+    width: 75%;
+    line-height: initial;
+    letter-spacing: initial;
+    font-size: initial;
+    color:initial;
+}
+
+.PostsPanel {
+    width: 90%;
+    height: auto;
+    line-height: initial;
+    letter-spacing: initial;
+    float:left;
+    font-size: 14px;
+    
+}
+
+.PostsPanel > * {
+    position: initial;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    right: initial;
+    height: initial;
+}
+
+.CreatePostsPanel {
+    width: 70%;
+    height: 20%;
+    line-height: initial;
+    letter-spacing: initial;
+    float: left;
+    font-size: 14px;
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+}
+
+.CreatePostsPanel > * {
+    position: initial;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    right: initial;
+    height: initial;
+}
+
+.PostsContainer {
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.QuestsPanelBtn {
+    line-height: initial;
+    letter-spacing: initial;
+    position: fixed;
+    left: 2%;
+    bottom: 2%;
+}
+
+.PostsContainer {
+    line-height: initial;
+    letter-spacing: initial;
+    font-size: initial;
+}
+
+.CreatePostCont {
+line-height: initial;
+    letter-spacing: initial;
+    font-size: initial;
+    width: 80%;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    padding-left: 20%;
+    border-top: 1px solid #999;
+
+}
+
+.PostsContainer {
+    width: 80%;
+    height: 65%;
+    float: left;
+    font-size: 15px;
+    margin-top: 2px;
+    float: left;
+    text-align: left;
+    color: #333;
+    font-weight: 400;
+    line-height: initial;
+    letter-spacing: initial; 
+    font-size: initial; 
+    overflow: scroll;
+} 
+
+
+.StepsPanelBtn {
+    line-height: initial;
+    letter-spacing: initial;
+    font-size: initial;
+}
+
+.CreateActivityPanel {
+    line-height: initial;
+    letter-spacing: initial;
+    font-size: initial;
+    text-align: right;
+    color: initial;
+        width: 60%;
+}
+
+
+.ActivitiesPanelContainer {
+    overflow: scroll;
+    overflow-y: scroll;
+    height: 90%;
+    line-height: initial;
+    letter-spacing: initial; 
+    color: initial; 
+    font-size:14px;
+    text-align: right;
+}
+
+
+.LoginPanelContainer {
+    border: 1px solid #666;
+    border-radius: 10px;
+    display: inline-block;
+    position: fixed;
+    padding: 2%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 40%;
+    min-width: 35%;
+    height: 40%;
+    margin: auto;
+    background-color: #f3f3f3;
+    color:#666;
+    line-height: initial;
+    letter-spacing: initial; 
+    font-size:14px;
+}
+
+.MainNavPanelContainer {
+    border: 1px solid #666;
+    border-radius: 10px;
+    display: inline-block;
+    position: fixed;
+    padding: 2%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 40%;
+    min-width: 35%;
+    height: 40%;
+    margin: auto;
+    background-color: #f3f3f3;
+    color:#666;
+    line-height: initial;
+    letter-spacing: initial; 
+    font-size:14px;
+}
+
+.RequestActivityPanelContainer {
+    border: 1px solid #666;
+    border-radius: 10px;
+    display: inline-block;
+    position: fixed;
+    padding: 2%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 40%;
+    min-width: 35%;
+    height: 40%;
+    margin: auto;
+    background-color: #f3f3f3;
+    color:#666;
+    line-height: initial;
+    letter-spacing: initial; 
+    font-size:14px;
+}
+
+.ProfilePanelContainer {
+	float:left;
+    width: 80%;
+    margin: auto;
+    color:#666;
+    line-height: initial;
+    letter-spacing: initial; 
+    font-size:14px;
+}
+
+
+.RegisterPanelContainer {
+    border: 1px solid #666;
+    border-radius: 10px;
+    display: inline-block;
+    position: fixed;
+    padding: 2%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 40%;
+    min-width: 35%;
+    height: 40%;
+    margin: auto;
+    background-color: #f3f3f3;
+    color:#666;
+    line-height: initial;
+    letter-spacing: initial; 
+    font-size:14px;
+}
+
+
+.QuestListIronList {
+
+	max-height:40%;
+	padding-top: 5%;
+	color: initial;
+	line-height: initial;
+    letter-spacing: initial; 
+
+}
+
+.PanelListClass {
+
+	max-height:40%;
+	padding-top: 5%;
+	color: initial;
+	line-height: initial;
+    letter-spacing: initial; 
+     text-align: right;
+
+}
+
+.TagsListIronList {
+
+	max-height:40%;
+	padding-top: 5%;
+	color: initial;
+
+}
+
+.PostsListIronList {
+
+	max-height:90%;
+	color: initial;
+	line-height: initial;
+    letter-spacing: initial; 
+
+}
+
+
+
+
+  paper-button.custom {
+    --paper-button-ink-color: var(--paper-pink-a200);
+    /* These could also be individually defined for each of the
+      specific css classes, but we'll just do it once as an example */
+    --paper-button-flat-keyboard-focus: {
+      background-color: var(--paper-pink-a200);
+      color: white !important;
+    };
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.custom:hover {
+    background-color: var(--paper-indigo-100);
+  }
+  paper-button.pink {
+    color: var(--paper-pink-a200);
+
+  }
+  paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
+  paper-button.green {
+    background-color: var(--paper-green-500);
+    color: white;
+  }
+  paper-button.green[active] {
+    background-color: var(--paper-red-500);
+  }
+  paper-button.disabled {
+    color: white;
+  } 
+
+
+    	
+    </style>

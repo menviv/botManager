@@ -1,0 +1,49 @@
+{
+  "name": "nodetest2",
+  "description": "Node's first app",
+  "main": "app.js",
+  "authors": [
+    "Menashe Gezelkopy"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "NodeJS",
+    "Polymer"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "neon-animation": "PolymerElements/neon-animation#^1.2.0",
+    "google-signin": "GoogleWebComponents/google-signin#^1.3.2",
+    "app-layout": "PolymerLabs/app-layout#^0.0.14",
+    "moment": "^2.13.0",
+    "paper-input": "^1.1.20",
+    "iron-ajax": "^1.4.3",
+    "paper-spinner": "^1.2.0",
+    "paper-menu": "^1.2.2",
+    "iron-icons": "^1.1.3",
+    "paper-button": "^1.0.13",
+    "paper-checkbox": "^1.4.0",
+    "iron-form": "^1.1.4",
+    "paper-toast": "^1.3.0",
+    "paper-progress": "^1.0.10",
+    "paper-toggle-button": "^1.2.0",
+    "iron-image": "^1.2.5",
+    "iron-demo-helpers": "^1.2.5",
+    "paper-drawer-panel": "^1.0.10",
+    "iron-media-query": "^1.0.8",
+    "paper-tooltip": "^1.1.3",
+    "paper-toolbar": "^1.1.6",
+    "paper-icon-button": "^1.1.2"
+  }
+}
