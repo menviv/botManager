@@ -1,17 +1,13 @@
 
-    <title>פרחי ויולט אריאל</title>
+    <title>Bot Builder Management</title>
     
   <meta charset="UTF-8">  
-
-	<meta property="og:type"               content="article" />
-	<meta property="og:title"              content="פרחי ויולט אריאל" />
-	<meta property="og:description"        content="שולחים פרחים ליקיריכם? כאן תוכלו לצרף את הברכה המתאימה למשלוח" />
-       
+   
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" href="/logos/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/logos/favicon.png" type="image/x-icon">
 
     <script type="text/javascript" src="../platform/platform.js"></script>
     <script src="../jquery/dist/jquery.min.js"></script>
@@ -29,7 +25,7 @@
     
     <script src="../dropzone/dist/min/dropzone.min.js"></script>
        
-    <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
 
     <link rel="stylesheet" href="../dropzone/dist/min/dropzone.min.css">
 
@@ -103,7 +99,7 @@
 
     <link rel="import" href="../createOutMessage.html">  
     <link rel="import" href="../CreateInMessage.html">  
-    <link rel="import" href="../MessagesOut.html">  
+    <link rel="import" href="../Admin.html">  
 
 
 
@@ -115,7 +111,7 @@
 
 
     body{
-      font-family: 'Alef', sans-serif;
+      font-family: 'Assistant', sans-serif;
       background-color: #fff;
     }
 
@@ -130,9 +126,7 @@ body.loading .modal {
     display: block;
 }    
     
-      body {
-        direction: rtl;
-   		} 
+
     
 	neon-animated-pages {
     	position: absolute;
@@ -285,178 +279,7 @@ body.loading .modal {
     display: none; 
 }
 
-.Loader {
 
-    position: fixed;
-    background-color: #9C27B0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    text-align: center;
-    top: 0;
-    left: 0;
-    margin: 0;
-
-}
-
-.PageLoaded {display: none;}
-
-
-
-.cssload-container {
-  width: 117px;
-  margin: 0 auto;
-  margin-top:20%;
-}
-
-.cssload-circle-1 {
-  height: 117px;
-  width: 117px;
-  background: rgb(97,46,141);
-}
-
-.cssload-circle-2 {
-  height: 97px;
-  width: 97px;
-  background: rgb(194,34,134);
-}
-
-.cssload-circle-3 {
-  height: 78px;
-  width: 78px;
-  background: rgb(234,34,94);
-}
-
-.cssload-circle-4 {
-  height: 58px;
-  width: 58px;
-  background: rgb(237,91,53);
-}
-
-.cssload-circle-5 {
-  height: 39px;
-  width: 39px;
-  background: rgb(245,181,46);
-}
-
-.cssload-circle-6 {
-  height: 19px;
-  width: 19px;
-  background: rgb(129,197,64);
-}
-
-.cssload-circle-7 {
-  height: 10px;
-  width: 10px;
-  background: rgb(0,163,150);
-}
-
-.cssload-circle-8 {
-  height: 5px;
-  width: 5px;
-  background: rgb(22,116,188);
-}
-
-.cssload-circle-1,
-.cssload-circle-2,
-.cssload-circle-3,
-.cssload-circle-4,
-.cssload-circle-5,
-.cssload-circle-6,
-.cssload-circle-7,
-.cssload-circle-8 {
-  border-bottom: none;
-  border-radius: 50%;
-    -o-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-    -o-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-    -ms-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-  animation-name: cssload-spin;
-    -o-animation-name: cssload-spin;
-    -ms-animation-name: cssload-spin;
-    -webkit-animation-name: cssload-spin;
-    -moz-animation-name: cssload-spin;
-  animation-duration: 4600ms;
-    -o-animation-duration: 4600ms;
-    -ms-animation-duration: 4600ms;
-    -webkit-animation-duration: 4600ms;
-    -moz-animation-duration: 4600ms;
-  animation-iteration-count: infinite;
-    -o-animation-iteration-count: infinite;
-    -ms-animation-iteration-count: infinite;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-  animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    -ms-animation-timing-function: linear;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-}
-
-
-
-@keyframes cssload-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@-o-keyframes cssload-spin {
-  from {
-    -o-transform: rotate(0deg);
-  }
-  to {
-    -o-transform: rotate(360deg);
-  }
-}
-
-@-ms-keyframes cssload-spin {
-  from {
-    -ms-transform: rotate(0deg);
-  }
-  to {
-    -ms-transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes cssload-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@-moz-keyframes cssload-spin {
-  from {
-    -moz-transform: rotate(0deg);
-  }
-  to {
-    -moz-transform: rotate(360deg);
-  }
-}
-
-.labelLoadr {
-    width: 100%;
-    margin-right: 0;
-    text-align: center;
-    color: #fff;
-    font-weight: 500;
-    margin-top: 15vw;
-    font-family: alef;
-    font-size: 5vw;
-    padding: initial;
-    float: right;
-}
 
 #paperDrawerPanel [main]:not([style-scope]):not(.style-scope) {
     background-color: fff;
@@ -496,10 +319,11 @@ iron-icon.LogoIcon[wide-layout] {
 }
 
      paper-toolbar {
-        color: white;
-        background-color: #9C27B0;
+        color: #444;
+        background-color: rgba(0, 0, 0, 0.14);
         white-space: nowrap;
         padding: 0 0px;
+        direction: ltr;
       }
 
 
@@ -518,162 +342,29 @@ iron-icon.LogoIcon[wide-layout] {
     <iron-media-query query="(min-width: 600px)" query-matches="{{wide}}"></iron-media-query>
 
     <paper-toolbar class="violet">
+
+      
       <paper-icon-button  src="/logos/logo.png" ></paper-icon-button>
-      <span class="title">פרחי ויולט אריאל</span>
-      <paper-icon-button class="white" src="/icons/textlist.png" id="GoToMessageList"></paper-icon-button>
-      <paper-icon-button class="white"  src="/icons/sms.png" id="CreateSMS"></paper-icon-button>
+
+      <span class="title">Bot Administrastion</span>
+      
+      <!--
+        <paper-icon-button class="white" src="/icons/textlist.png" id="GoToMessageList"></paper-icon-button>
+        <paper-icon-button class="white"  src="/icons/sms.png" id="CreateSMS"></paper-icon-button>
+      -->
     </paper-toolbar>
 
-
-  <div class="Loader" id="LoaderObj">
-
-      <div id="labelLoadrID" class="labelLoadr">פרחי ויולט אריאל</div>
-    
-      <div class="LogoCont" wide-layout$="{{wide}}">  
-        
-        <svg id="pane" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 450 450" preserveAspectRatio="xMidYMid meet" onload="init(60,false)">
-
-          <script type="text/javascript">
-          <![CDATA[
-          Math.rnd=function(von, bis) {
-            const min= Math.min(von, bis);
-            return Math.random() * (Math.max(von, bis) - min) + min;
-          }
-
-          function spline(x, y, minR, maxR) {
-            var
-                alpha = Math.rnd (0, 2 * Math.PI)
-              , mtx= Math.rnd (minR, maxR)
-              , mty= Math.rnd (minR, maxR / 1.4)
-              , tx= mtx * Math.sin (alpha)
-              , ty= mty * Math.cos (alpha)
-              , sx= (mtx * Math.rnd (0.1, 0.9)) * Math.sin (alpha)
-              , sy= mty * Math.cos (alpha)
-              , target = {x: Math.round(tx + x), y: Math.round(ty + (y * 1.1))}
-              , spline = {x: Math.round(sx + x), y: Math.round(sy + (y * Math.rnd (0.5, 0.9)))}
-              , path = 'M' + x + ' ' + y + 'Q' + spline.x + ' ' + spline.y + ',' + target.x + ' ' + target.y
-              , rotate = 'auto' + ((target.x > x) ? '-reverse' : '')
-            ;
-            return {path: path, rotate: rotate};
-          }
-
-          function init(elements, visibility) {
-            const
-                BEGIN= 'begin'
-              , PATH= 'path'
-              , ROTATE= 'rotate'
-              , DUR= 'dur'
-              , D= 'd'
-              , STYLE= 'style'
-              , ID= 'id'
-            ;
-            var
-                svg= document.getElementById ('pane')
-              , c= svg.getElementById ('pfad')
-              , d= svg.getElementById ('objekt')
-            ;
-
-              for (var i= 1; i <= elements; i++) {
-              var
-                  t= Math.rnd (2, 10)
-                , s= spline (225, 225, 25, 220)
-                , cln= c.cloneNode (true)
-                , dln= d.cloneNode (true)
-              ;
-
-              cln.setAttribute (ID, 'pfad' + i);
-              cln.setAttribute (STYLE, 'visibility:' + (visibility ? 'visible' : 'hidden'));
-              cln.setAttribute (D, s.path);
-              svg.appendChild (cln);
-
-              dln.setAttribute (ID, 'objekt' + i);
-              dln.childNodes[1].setAttribute (ID, 'a1_' + i); // motion
-              dln.childNodes[1].setAttribute (PATH, s.path); // motion
-              dln.childNodes[1].setAttribute (ROTATE, s.rotate); // motion
-              dln.childNodes[1].setAttribute (DUR, t); // motion
-              dln.childNodes[3].setAttribute (DUR, t); // fill
-              dln.childNodes[5].setAttribute (DUR, t); // opacity
-              dln.childNodes[7].setAttribute (DUR, t); // scale
-              svg.appendChild (dln);
-            }
-            svg.removeChild (c);
-            svg.removeChild (d);
-            document.getElementById ('a1_1').setAttribute (BEGIN, '0s'); // Begin when all is set and done
-          }
-
-          ]]>
-          </script>
-          <defs>
-          <g id="flower">
-            <defs>
-              <style>
-                circle {fill:yellow;stroke:lightgreen;sroke-width:0.5}
-                ellipse {fill:rose;stroke:pink;sroke-width:0.5}
-              </style>
-              <g id="blatt">
-                <ellipse cx="0" cy="0" rx="7" ry="10" transform="translate (0,10)"/>
-              </g>
-            </defs>
-              <use xlink:href="#blatt"/>
-              <use xlink:href="#blatt" transform="rotate(72)"/>
-              <use xlink:href="#blatt" transform="rotate(144)"/>
-              <use xlink:href="#blatt" transform="rotate(216)"/>
-              <use xlink:href="#blatt" transform="rotate(288)"/>
-            <circle cx="0" cy="0" r="3"/>
-          </g>
-          </defs>
-          <style>
-            path {stroke:black;stroke-width:0.1;stroke-linecap:round;fill:none}
-            use {will-change:opacity}
-          </style>
-          <path id="pfad" d=""/>
-          <use id="objekt" width="40" height="40" xlink:href="#flower">
-            <animateMotion begin="a1_1.begin" repeatCount="indefinite" fill="remove"/>
-            <animate attributeName="fill" attributeType="CSS" values="blue;lightblue;yellow" repeatCount="indefinite" fill="remove"/>
-            <animate attributeName="opacity" values="0.1;1;0.6;" repeatCount="indefinite" fill="remove"/>
-            <animateTransform attributeName="transform" type="scale" from="1" to="0" repeatCount="indefinite" fill="remove"/>
-          </use>
-          </svg>
-
-
- </div>  
-
-      
-
-  </div>
-
-
   
-  
-  
-  
-
-      
-      
    <template is="dom-bind">
   
 
   
 
-      <neon-animated-pages id="pages" selected="[[selected]]" entry-animation="[[entryAnimation]]" exit-animation="[[exitAnimation]]">
-  
-        
-        <neon-animatable entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
-        
-				      <x-createOutMessage class="PanelCreateEntity"></x-createOutMessage> 
-					      
-        </neon-animatable>
-
+      <neon-animated-pages id="pages" selected="[[selected]]" entry-animation="[[entryAnimation]]" exit-animation="[[exitAnimation]]">      
 
         <neon-animatable entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
         
-				      <x-CreateInMessage class="PanelCreateEntity"></x-CreateInMessage> 
-					      
-        </neon-animatable>        
-
-        <neon-animatable entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
-        
-				      <x-MessagesOut class="PanelCreateEntity"></x-MessagesOut> 
+				      <x-Admin class="PanelCreateEntity"></x-Admin> 
 					      
         </neon-animatable>      
 

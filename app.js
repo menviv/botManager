@@ -25,20 +25,31 @@ var db = monk('localhost:27017/nodetest2');
 
 var mongo = require('mongodb');
 var assert = require('assert');
-var connString = 'mongodb://menashe:menashe@ds035006.mlab.com:35006/sms2fax';
+
+// Initialize mongo integration must
+
+var mongo = require('mongodb');
+var connString = 'mongodb://bot:bot@ds056979.mlab.com:56979/builderbot';
 var MongoClient = require('mongodb').MongoClient;
 var ObjectID = require('mongodb').ObjectID;
 var dbm;
-var collTextOut;
+var collTrees;
+var collPaths;
+var collOpts;
+var collUsers;
 
 
 // Initialize connection once
 
 mongo.MongoClient.connect(connString, function(err, database) {
   if(err) throw err;
-
+ 
   dbm = database;
-  collTextOut = dbm.collection('TextOut');
+
+  collTrees = dbm.collection('Trees');
+  collPaths = dbm.collection('Paths');
+  collOpts = dbm.collection('Opts');
+  collUsers = dbm.collection('Users');
 
 });
 
@@ -48,7 +59,7 @@ mongo.MongoClient.connect(connString, function(err, database) {
 
 
 var routes = require('./routes/index');
-var smsOut = require('./routes/smsOut');
+var botadmin = require('./routes/botadmin');
 
 var app = express();
 var server = app.listen(8080);
@@ -76,7 +87,7 @@ app.use(function(req,res,next){
 });
 
 app.use('/', routes);
-app.use('/smsOut', smsOut);
+app.use('/botadmin', botadmin);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
