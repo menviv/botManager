@@ -62,7 +62,7 @@ var routes = require('./routes/index');
 var botadmin = require('./routes/botadmin');
 
 var app = express();
-var server = app.listen(8888);
+var server = app.listen(80);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
