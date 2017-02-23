@@ -684,6 +684,9 @@ paper-card#OptsList {
        
   </style>
 
+  <paper-toast id="UpdateRecordStatusLive" text="The records status is set to LIVE"></paper-toast> 
+
+  <paper-toast id="UpdateRecordStatusDraft" text="The records status is set to DRAFT"></paper-toast> 
 
   <iron-media-query query="(min-width: 800px)" query-matches="{{wide}}"></iron-media-query> 
 
@@ -894,9 +897,13 @@ changePathStatus: function(e) {
 
        Status = 'live';
 
+       UpdateRecordStatusLive.open();
+
    } else {
 
        Status = 'draft';
+
+       UpdateRecordStatusDraft.open();
 
    }
 
